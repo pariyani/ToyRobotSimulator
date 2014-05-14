@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[
+]>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<link
+		href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+	<link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" href="#{facesContext.externalContext.requestContextPath}/resources/css/layout.css" />
+	<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
+	<title>Toy Robot - Place</title>
+
+</h:head>
+<h:body class="withbg">
+
+
+	<!-- Content Center -->
+		<div class="content_center">
+			<div class="pagewidth">
+				<center>
+				<h:messages id="globalmessagesnew" styleClass="messagesnew" errorClass="globalerror" infoClass="globalconfirmation" layout="table" globalOnly="true" showDetail="false" showSummary="true" />
+
+				<h:form id="lostpass" prependId="false">
+					<div class="headline">Please give the X and Y Co-ordinates and the direction.</div>
+					<div class="cols3">
+						<div class="col-content">
+							Position:X
+							<h:inputText id="x" value="#{toyBean.x}" required="true" requiredMessage="#{msg['required']}" class="tableCellInputText" validatorMessage="#{msg['amount.validationerror']}">
+								<f:validateLongRange minimum="0" />
+							</h:inputText>
+							<h:message for="x" errorClass="error" style="display:block" />
+						</div>
+						<div class="col-content">
+							Position:Y
+							<h:inputText id="y" value="#{toyBean.y}" required="true" requiredMessage="#{msg['required']}" class="tableCellInputText" validatorMessage="#{msg['amount.validationerror']}">
+								<f:validateLongRange minimum="0" />
+							</h:inputText>
+							<h:message for="y" errorClass="error" style="display:block" />
+						</div>
+						<div class="col-content">
+							<h:selectOneListbox id="facing" value="#{toyBean.facing}" size="1" class="tableCellSelect" style="width:98%">
+								<f:selectItems value="#{toyBean.directions}"/>
+							</h:selectOneListbox>	
+						</div>
+					</div>
+					<div class="clear" />
+					<div style="padding: 10px 0px;">
+						<h:outputLink value="/index.html" style="margin-right:20px;">Cancel</h:outputLink>
+						<h:commandButton type="submit" id="recover" action="#{toyBean.place}" value="Save" class="button" />
+					</div>
+					
+				</h:form>
+				</center>
+			</div>
+		</div>
+
+
+</h:body>
+</html>

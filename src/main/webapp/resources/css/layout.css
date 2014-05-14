@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+html{overflow-y:scroll}html, body {height: 100%;}
+body{font-family: 'Open Sans', Helvetica, sans-serif;font-size: 12px;color: #333333;margin: 0;cursor:default !important;font-weight: 400;min-width: 1024px;}
+body.withbg{background-color: #D0E3E8;}
+.pagewidth{ margin: auto;width: 1024px;}
+.tableCellInputText,.tableCellSelect {background-color: #D8DDE1;border: 1px solid #728CA0;text-align: right;font-family: Cousine;font-size: 34px;border-radius: 5px;width:200px;padding: 5px;}
+.tableCellSelect{text-align: left;}
+.pagewidth{padding-top:120px; }
+.button{
+	font-family: 'Open Sans', Helvetica, sans-serif !important;font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#53A826', endColorstr='#6CC337');
+	background: -ms-linear-gradient(#6CC337, #279201);
+	background: -moz-linear-gradient(center bottom , #279201, #6CC337) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, from(#6CC337), to(#279201));
+	background: -o-linear-gradient(bottom , #279201, #6CC337);
+	border: 1px solid #279201;color: #E8F0DE;
+	-webkit-border-radius: .2em; -moz-border-radius: .2em;border-radius: .2em;padding:0 15px; color: #333333;
+	font-weight: 600;width: 200px;height:40px;}
+.globalerror {text-align:left;color:red;}
+.globalconfirmation {text-align:left;color:#1353A3;}
+.confirmationmessage{color:#279201;padding:10px 0}
+.error {font-size:12px;font-weight:400;color:red;}
+.confirmation {font-size:12px;font-weight:400;color:green;}
+.cols3{padding-top:60px;} .cols3 .col-content{float:left;padding-left:10px;width:32%;}
+.headline{font-weight: 600;font-size: 18px;}.clear{clear: both;}
